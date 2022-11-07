@@ -1,0 +1,10 @@
+version: '3'
+services:
+  odb:
+    container_name: orientdb-kel1
+    image: orientdb:latest
+    command: dserver.sh
+    ports:
+      - 2480:2480
+  
+
