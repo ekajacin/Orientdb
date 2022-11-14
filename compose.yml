@@ -1,10 +1,12 @@
 version: '3'
 services:
   odb:
-    container_name: orientdb-kel1
-    image: orientdb:latest
+    container_name: orientdb-kelompok1
+    image: orientdb:3.0.4
     command: dserver.sh
     ports:
       - 2480:2480
-  
+    volumes:
+      - ./var/odb/config:/orientdb/config
+      - ./var/odb/databases:/orientdb/databases
 

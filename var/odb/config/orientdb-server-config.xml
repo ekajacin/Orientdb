@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<orient-server>
+    <network>
+        <protocols>
+            <protocol implementation="com.orientechnologies.orient.server.network.protocol.binary.ONetworkProtocolBinary" name="binary"/>
+        </protocols>
+        <listeners>
+            <listener protocol="binary" socket="default" port-range="2424-2430" ip-address="127.0.0.1"/>
+        </listeners>
+    </network>
+    <storages/>
+    <users>
+        <user resources="*" password="{PBKDF2WithHmacSHA256}C237F90D4C4B240C15EA2E24401B8A8B8CCB3C0BB26A3BEA:4428C43DF8EC271CE0FE982DDF37E976D6A3634F0B866470:65536" name="root"/>
+        <user resources="connect,server.listDatabases,server.dblist" password="{PBKDF2WithHmacSHA256}F247E1568A4E64F9805E572F3500E6B915732771EA421F7F:E62CAD720C5EDB4D202B06B125B836575C53057D01A21DA3:65536" name="guest"/>
+    </users>
+    <security>
+        <users/>
+        <resources/>
+    </security>
+    <isAfterFirstTime>true</isAfterFirstTime>
+</orient-server>
